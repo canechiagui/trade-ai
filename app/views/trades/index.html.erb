@@ -1,0 +1,21 @@
+<h1>Dashboard of Trades</h1>
+
+<div class="card">
+    <img src="https://clubedospoupadores.com/wp-content/uploads/2022/04/bova11-x-cdi.png" alt="trading" width="500" height="auto">
+</div>
+
+
+<div class="card">
+  <h2>Trades</h2>
+
+  <% @trades.each do |trade| %>
+    <ul>
+      <li>
+        </p><strong>Asset:</strong><%= trade.asset %> <strong>Result:</strong><%=trade.financial_result %> <strong>Contracts:</strong><%=trade.contracts%><p>
+      </li>
+    </ul>
+  <% end %>
+</div>
+
+<h2>Day performance</h2>
+  <p><strong>Hit Rate:</strong>40%</p>
