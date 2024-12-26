@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_12_25_211542) do
+ActiveRecord::Schema[7.2].define(version: 2024_12_25_222637) do
+  create_table "investments", force: :cascade do |t|
+    t.string "asset"
+    t.float "value"
+    t.decimal "percent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "trades", force: :cascade do |t|
     t.string "asset"
     t.integer "contracts"

@@ -1,7 +1,7 @@
 <h1>Dashboard of Trades</h1>
 
 <div class="card">
-    <img src="https://clubedospoupadores.com/wp-content/uploads/2022/04/bova11-x-cdi.png" alt="trading" width="500" height="auto">
+    <img src="https://clubedospoupadores.com/wp-content/uploads/2022/04/bova11-x-cdi.png" alt="trading" width="600" height="auto">
 </div>
 
 
@@ -17,5 +17,18 @@
   <% end %>
 </div>
 
-<h2>Day performance</h2>
-  <p><strong>Hit Rate:</strong>40%</p>
+<div class="card">
+  <h2>Day performance</h2>
+    <img src="https://www.investopedia.com/thmb/uf6yhbf_NsqLJsaMkIGNv17HI4Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/performance2-5c05849d46e0fb0001810d0c" alt="per">
+  </div>
+
+<div>
+  <%= link_to new_trade_path, class: "btn btn-primary", role: "button" do %>
+    Create a trade
+  <% end %>
+</div>
+
+
+<div>
+<%= link_to "Go to Investments", investments_path, class: "btn btn-primary" %>
+</div>

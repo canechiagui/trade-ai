@@ -1,0 +1,48 @@
+<h1>Create a new trade</h1>
+
+<div class="card">
+  <%= form_with(model: @investment, local: true) do |form| %>
+    <div class="form-group">
+      <%= form.label :asset %>
+      <%= form.text_field :asset, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :contracts %>
+      <%= form.number_field :integer, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :buy_price %>
+      <%= form.number_field :float, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :sell_price %>
+      <%= form.number_field :float, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :financial_result %>
+      <%= form.number_field :float, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :result, "Positive Result" %>
+      <%= form.check_box :positive_result, class: "form-check-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :result, "Negative Result" %>
+      <%= form.check_box :negative_result, class: "form-check-input" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.submit "Create", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Trades", trades_path, class: "btn btn-primary" %>
+</div>

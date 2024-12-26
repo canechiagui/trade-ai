@@ -1,0 +1,34 @@
+<h1>My Investments</h1>
+
+  <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2022/05/bandeira-estados-unidos.jpg" alt="eua" width="30" height="auto">
+  <img src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/2-bandeira-do-brasil.jpg" alt="brazil" width="30" height="auto">
+
+<div class="card">
+    <img src="https://d9hzq3shxgvwu.cloudfront.net/news/images/9e5ee735fdcc484aba9e32780b2a5318_captura-de-tela-2022-05-02-as-181553.png" alt="invesments" width="600" height="auto">
+</div>
+
+
+<div class="card">
+  <h2>Assets</h2>
+
+  <% @investments.each do |invesment| %>
+    <ul>
+      <li>
+        </p><strong>Asset:</strong><%= invesment.asset %> <strong>Value:</strong><%=invesment.value%><p>
+      </li>
+    </ul>
+  <% end %>
+</div>
+
+<div class="card">
+  <h2>Asset alocation</h2>
+    <img src="https://help.rightcapital.com/_next/image?url=https%3A%2F%2Fa-us.storyblok.com%2Ff%2F1003391%2F2530x1310%2F6774edee8f%2Fcleanshot-2024-10-23-at-12-16-45-2x.png&w=1920&q=95" alt="alocation" width="600" height="auto">
+</div>
+
+<div>
+<%= link_to "Create a investment", new_investment_path, class: "btn btn-primary" %>
+</div>
+
+<div>
+<%= link_to "Go to Trades", trades_path, class: "btn btn-primary" %>
+</div>
